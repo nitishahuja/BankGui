@@ -16,7 +16,7 @@ const Content = ({ activeTable }) => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:4000/get${activeTable
+          `https://bankguiserver.onrender.com/get${activeTable
             .replace("_", "")
             .replace("_", "")}Details`
         );
@@ -43,7 +43,7 @@ const Content = ({ activeTable }) => {
   const handleAddData = async (formData) => {
     try {
       const response = await fetch(
-        `http://localhost:4000/insertInto${activeTable
+        `https://bankguiserver.onrender.com/insertInto${activeTable
           .replace("_", "")
           .replace("_", "")}`, // Modify the endpoint accordingly
         {
@@ -57,7 +57,7 @@ const Content = ({ activeTable }) => {
 
       if (response.ok) {
         const updatedDataResponse = await fetch(
-          `http://localhost:4000/get${activeTable
+          `https://bankguiserver.onrender.com/get${activeTable
             .replace("_", "")
             .replace("_", "")}Details`
         );
@@ -81,7 +81,7 @@ const Content = ({ activeTable }) => {
     console.log(formData);
     try {
       // Construct the API endpoint based on the active table and primary key(s)
-      let endpoint = `http://localhost:4000/delete${activeTable
+      let endpoint = `https://bankguiserver.onrender.com/delete${activeTable
         .replace("_", "")
         .replace("_", "")}/`;
 
@@ -102,7 +102,7 @@ const Content = ({ activeTable }) => {
       });
       if (response.ok) {
         const updatedDataResponse = await fetch(
-          `http://localhost:4000/get${activeTable
+          `https://bankguiserver.onrender.com/get${activeTable
             .replace("_", "")
             .replace("_", "")}Details`
         );
@@ -129,7 +129,7 @@ const Content = ({ activeTable }) => {
       const primaryKey = primaryKeyValues.join("/");
 
       const response = await fetch(
-        `http://localhost:4000/update${activeTable
+        `https://bankguiserver.onrender.com/update${activeTable
           .replace("_", "")
           .replace("_", "")}/${primaryKey}`,
         {
@@ -143,7 +143,7 @@ const Content = ({ activeTable }) => {
 
       if (response.ok) {
         const updatedDataResponse = await fetch(
-          `http://localhost:4000/get${activeTable
+          `https://bankguiserver.onrender.com/get${activeTable
             .replace("_", "")
             .replace("_", "")}Details`
         );
