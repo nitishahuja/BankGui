@@ -1,0 +1,60 @@
+/* Navbar.css */
+
+.side-navbar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  height: 100vh;
+  z-index: 1;
+}
+
+.side-navbar.open {
+  width: 200px;
+  left: 0;
+}
+
+.side-navbar ul {
+  list-style: none;
+  padding: 40px 0;
+  margin-top: 20px;
+}
+
+.side-navbar li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.side-navbar li:hover {
+  background-color: #555;
+}
+
+.side-navbar li.active {
+  background-color: #007bff;
+}
+
+.navbar-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.navbar-toggle.open {
+  transform: rotate(90deg);
+}
